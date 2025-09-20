@@ -219,3 +219,28 @@ code{
 }
   
 }
+@media (max-width: 480px){
+  .hero-text {
+   position: absolute;
+   top: 85%;
+   left: 2%;
+  transform: translateY(-50%);
+    z-index: 2;
+     color: #fff;
+    font-family: "Jersey 15", sans-serif;
+                  }
+
+                  .hero-title {
+                    font-size: 30px;
+                      color: #ffffff;
+                        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+                        }
+
+                        .hero-subtitle {
+                          font-size: 28px;
+                            color: #583ea0;
+                              transform: translateY(-15%);
+                                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+                                }
+  }
+}
