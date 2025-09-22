@@ -85,7 +85,7 @@ header {
 
 .container {
   height: auto;
-  display: flex;
+  display: block;
   padding: 30px;
   gap: 30px;
   justify-content: space-evenly;
@@ -106,7 +106,7 @@ header {
   /* necessário para o label se posicionar dentro */
 }
 
-code {
+.code {
   font-size: 30px;
   background-color: #66666636;
   padding: 10px;
@@ -239,12 +239,127 @@ code {
     font-size: 18px;
   }
 
+  .image-container {
+  width: 225px;
+
 }
 
-@media (max-width:480px) {
+
+.image-container img {
+  width: 225px;
+  height: 300px;
+}
+
+.info {
+  padding: 10px 15px;
+}
+
+.info h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.info p {
+
+  font-size: 15px;
+
+}
+
+.container {
+  margin: 50px;
+  margin-bottom: 100px;
+}
+
+.code {
+  font-size: 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .logo {
+    height: 35px;
+  }
 
   .hero-text {
-    position: absolute;
+  top: 80%;
+
+  }
+
+  .hero-title {
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  .hero-subtitle {
+    font-size: 48px;
+    color: #583ea0;
+    transform: translateY(-15%);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  .image-container {
+  width: 170px;
+
+}
+
+
+.image-container img {
+  width: 170px;
+  height: 200px;
+}
+
+.info {
+  padding: 10px 15px;
+}
+
+.info h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.info p {
+
+  font-size: 15px;
+
+}
+
+.container {
+  margin: 40px;
+  margin-bottom: 80px;
+}
+
+.code {
+  font-size: 20px;
+  line-height: 15px;
+}
+p{
+  font-size: 30px;
+}
+.label{
+  font-size: 35px;
+    top: -18px;
+
+
+}
+}
+
+@media (max-width:425px) {
+
+  .hero-text {
+
     top: 78%;
     left: 2%;
     transform: translateY(-50%);
@@ -254,24 +369,78 @@ code {
   }
 
   .hero-title {
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   }
 
   .hero-subtitle {
-    font-size: 28px;
+    font-size: 23px;
     color: #583ea0;
     transform: translateY(-15%);
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   }
 
   .logo {
-    height: 30px;
+    height: 25px;
   }
 
   .menu a {
-    font-size: 12px;
+    font-size: 10px;
 
   }
+  
+    .image-container {
+  width: 100px;
+
+}
+
+
+.image-container img {
+  width: 125px;
+  height: 125px;
+}
+
+.info {
+  padding: 10px 15px;
+}
+
+.info h3 {
+  font-size: 14px;
+  color: #333;
+}
+
+.info p {
+
+  font-size: 11px;
+
+}
+
+.container {
+  margin: 40px;
+  margin-bottom: 80px;
+    line-height: 20px;
+      border: 2px solid #000;
+      
+}
+
+.code {
+  font-size: 20px;
+  line-height: 15px;
+  display: block;
+   word-wrap: break-word;      /* Força quebra automática */
+  overflow-wrap: break-word;  /* Alternativa moderna */
+  white-space: normal;        /* Permite quebra em várias linhas */
+}
+p{
+  font-size: 20px;
+
+}
+.label{
+  font-size: 15px;
+    top: -18px;
+
+
+}
+
 }
