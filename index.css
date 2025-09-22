@@ -112,6 +112,9 @@ header {
   padding: 10px;
   border-radius: 20px;
   font-family: "Jersey 15", sans-serif;
+   word-wrap: break-word;      /* Força quebra automática */
+  overflow-wrap: break-word;  /* Alternativa moderna */
+  white-space: normal;        /* Permite quebra em várias linhas */
 }
 
 .hero {
@@ -427,10 +430,7 @@ p{
 .code {
   font-size: 20px;
   line-height: 15px;
-  display: block;
-   word-wrap: break-word;      /* Força quebra automática */
-  overflow-wrap: break-word;  /* Alternativa moderna */
-  white-space: normal;        /* Permite quebra em várias linhas */
+
 }
 p{
   font-size: 20px;
