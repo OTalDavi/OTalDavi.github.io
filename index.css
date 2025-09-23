@@ -9,6 +9,7 @@
   --color-text: #000;
 
 }
+/* era pra fazer os temas mas n deu tempo :p*/
 
 html {
   scroll-behavior: smooth;
@@ -18,7 +19,7 @@ body {
   background-color: var(--bg-body);
 }
 
-/* HEADER */
+
 header {
   box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.178);
 }
@@ -31,12 +32,10 @@ header {
   padding: 10px 20px;
 }
 
-/* LOGO */
+
 .logo {
   height: 50px;
 }
-
-/* MENU */
 .menu {
   display: flex;
   gap: 20px;
@@ -103,7 +102,7 @@ header {
 
 .container {
   position: relative;
-  /* necessário para o label se posicionar dentro */
+
 }
 
 .code {
@@ -112,9 +111,9 @@ header {
   padding: 10px;
   border-radius: 20px;
   font-family: "Jersey 15", sans-serif;
-   word-wrap: break-word;      /* Força quebra automática */
-  overflow-wrap: break-word;  /* Alternativa moderna */
-  white-space: normal;        /* Permite quebra em várias linhas */
+   word-wrap: break-word;      
+  overflow-wrap: break-word;  
+  white-space: normal;        
 }
 
 .hero {
@@ -152,9 +151,9 @@ header {
 .label {
   position: absolute;
   top: -25px;
-  /* sobe a label */
+
   left: 20px;
-  /* desloca da borda esquerda */
+
   background-color: #d3d3d3;
   border-radius: 20px;
   font-size: 40px;
