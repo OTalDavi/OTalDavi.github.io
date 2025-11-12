@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="imagem/download (28).jfif">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="imagem/download (28).jfif" />
 
-  <!-- Pré-carregamento de fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+  <!-- Pré-carregar imagem principal (melhor LCP) -->
+  <link rel="preload" as="image" href="imagem/Design sem nome.png" fetchpriority="high" />
 
-  <link rel="stylesheet" href="index.css">
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+
   <title>Green Studio</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar">
-      <img src="imagem/Davi Salvador Schubert.png" alt="Logo Green Studio" class="logo" width="150" height="50">
+      <img src="imagem/Davi Salvador Schubert.png" alt="Logo Green Studio" class="logo" />
+
       <ul class="menu">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#musica">Músicas</a></li>
@@ -28,116 +34,126 @@
     </nav>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
-    <img src="imagem/Design sem nome.png" alt="Imagem de capa Green Studio" width="1920" height="1080" loading="eager">
+    <picture>
+      <source srcset="imagem/Design sem nome.webp" type="image/webp" />
+      <img src="imagem/Design sem nome.png" alt="Hero image" width="1920" height="1080" loading="eager" />
+    </picture>
     <div class="hero-overlay"></div>
+
     <div class="hero-text">
       <h1 class="hero-title">Publicar Aplicações Web:</h1>
       <h1 class="hero-subtitle">Davi S. Schubert</h1>
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section class="container" id="sobre">
-    <span class="label">Sobre Mim</span>
-    <p>Meu nome é Davi Salvador Schubert, tenho 15 anos e nasci em Joinville. Adoro explorar diferentes
-      formas de arte e entretenimento. Entre meus desenhos favoritos estão <em>Hora de Aventura</em> e
-      <em>Steven Universo</em>, que admiro pela criatividade, histórias profundas e personagens cativantes.
-    </p>
-  </section>
+  <main>
+    <div class="container" id="sobre">
+      <span class="label">Sobre Mim</span>
+      <p>Meu nome é Davi Salvador Schubert, Tenho 15 anos e nasci e fui criado em Joinville. Tenho gostos bastante
+        variados e adoro explorar diferentes formas de arte e entretenimento. Entre meus desenhos favoritos estão
+        <em>Hora de Aventura</em> e <em>Steven Universo</em>, que admiro não apenas pela diversão e criatividade,
+        mas também pelas histórias profundas e personagens cativantes que apresentam.
+      </p>
+    </div>
 
-  <!-- MÚSICA -->
-  <section class="container" id="musica">
-    <span class="label">Meu Gosto Musical</span>
-    <p>Sou extremamente eclético, gosto de pop, rap, hip-hop, indie e jazz. Aprecio músicas com letras inteligentes,
-      batidas marcantes e sonoridades únicas.</p>
-  </section>
+    <div class="container" id="musica">
+      <span class="label">Meu gosto Musical</span>
+      <p>Considero-me uma pessoa extremamente eclética quando se trata de música, pois tenho uma curiosidade natural
+        por explorar os mais diversos estilos e gêneros. Gosto de tentar de tudo, desde o pop, que consegue ser ao
+        mesmo tempo leve e viciante, até o rap e o hip-hop, cheios de rimas inteligentes e batidas marcantes. Também
+        aprecio o indie, com suas letras introspectivas e jazz.
+      </p>
+    </div>
 
-  <!-- GALERIA DE MÚSICA -->
-  <div class="galeria">
-    <div class="image-container">
-      <img src="imagem/lllll.jpg" alt="Billie Eilish" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Billie Eilish</h3>
-        <p>Conhecida por seu estilo único e introspectivo.</p>
+    <div class="galeria">
+      <div class="image-container">
+        <img src="imagem/lllll.jpg" alt="Billie Eilish" />
+        <div class="info">
+          <h3>Billie Eilish</h3>
+          <p>Conhecido como Finn O Humano</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="imagem/sf.jpg" alt="Tyler, The Creator" />
+        <div class="info">
+          <h3>Tyler, The Creator</h3>
+          <p>Conhecido como Jake O Cachorro</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="imagem/gh.jpg" alt="Eminem" />
+        <div class="info">
+          <h3>Eminem</h3>
+          <p>Conhecida como Marceline a Rainha Vampira</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="imagem/ukhk.jfif" alt="Radiohead" />
+        <div class="info">
+          <h3>Radiohead</h3>
+          <p>Conhecido como a Princesa Jujuba</p>
+        </div>
       </div>
     </div>
-    <div class="image-container">
-      <img src="imagem/sf.jpg" alt="Tyler, The Creator" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Tyler, The Creator</h3>
-        <p>Rimas criativas e estética visual ousada.</p>
-      </div>
-    </div>
-    <div class="image-container">
-      <img src="imagem/gh.jpg" alt="Eminem" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Eminem</h3>
-        <p>Rimas rápidas e letras poderosas.</p>
-      </div>
-    </div>
-    <div class="image-container">
-      <img src="imagem/ukhk.jfif" alt="Radiohead" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Radiohead</h3>
-        <p>Som experimental e letras filosóficas.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- JOGOS -->
-  <section class="container" id="jogos">
-    <span class="label">Meus Jogos e Desenhos Favoritos</span>
-    <p>Adoro jogos como <strong>Minecraft</strong>, <strong>Pokémon</strong> e <strong>Roblox</strong>. Também sou fã de animações
-      como <em>Hora de Aventura</em>, <em>Gravity Falls</em> e <em>Over the Garden Wall</em>, que misturam humor, amizade e fantasia.
-    </p>
-  </section>
+    <div class="container" id="jogos">
+      <span class="label">Meus jogos e desenhos favoritos</span>
+      <p>Gosto de jogos que permitem explorar. Entre meus favoritos estão Minecraft, onde posso construir e explorar
+        mundos infinitos; Pokémon, que mistura estratégia, aventura e colecionismo; e Roblox, que permite criar, jogar
+        e interagir com diversos universos diferentes.
 
-  <!-- GALERIA DE JOGOS -->
-  <div class="galeria">
-    <div class="image-container">
-      <img src="imagem/Minecraft whoa.jfif" alt="Minecraft" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Minecraft</h3>
-        <p>Jogo sandbox criativo de sobrevivência e construção.</p>
-      </div>
+        Também sou fã de animações que misturam mistério, aventura, amizade e fantasia de uma maneira única. Adoro Hora
+        de Aventura, que combina humor, fantasia e amizades inesquecíveis, e Gravity Falls, com seus mistérios
+        intrigantes e personagens carismáticos. Também sou fã de Over the Garden Wall, que traz uma atmosfera única de
+        aventura e fantasia sombria.
+      </p>
     </div>
-    <div class="image-container">
-      <img src="imagem/download (29).jfif" alt="Pokémon" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Pokémon</h3>
-        <p>Clássico jogo de aventura, estratégia e colecionismo.</p>
-      </div>
-    </div>
-    <div class="image-container">
-      <img src="imagem/download (30).jfif" alt="Over the Garden Wall" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Over the Garden Wall</h3>
-        <p>Dois irmãos perdidos em uma terra misteriosa.</p>
-      </div>
-    </div>
-    <div class="image-container">
-      <img src="imagem/ioç.jpg" alt="Hora de Aventura" width="300" height="400" loading="lazy">
-      <div class="info">
-        <h3>Hora de Aventura</h3>
-        <p>Uma jornada mágica repleta de humor e amizade.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- GITHUB -->
-  <section class="container" id="git">
-    <span class="label">GitHub</span>
-    <p>
-      Para publicar uma página no GitHub Pages:
-      <br><br>
-      1️⃣ Crie um repositório público.<br>
-      2️⃣ Adicione seus arquivos (incluindo <b>index.html</b>).<br>
-      3️⃣ Vá em <b>Settings &gt; Pages</b>, escolha a branch <b>main</b> e pasta <b>/(root)</b>.<br><br>
-      Seu site estará disponível em:<br><br>
-      <code>https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/</code>
-    </p>
-  </section>
+    <div class="galeria">
+      <div class="image-container">
+        <img src="imagem/Minecraft whoa.jfif" alt="Minecraft" />
+        <div class="info">
+          <h3>Minecraft</h3>
+          <p>Minecraft é um jogo eletrônico sandbox de sobrevivência</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="imagem/download (29).jfif" alt="Pokémon" />
+        <div class="info">
+          <h3>Pokémon</h3>
+          <p>Pokémon, abreviação do título japonês Pocket Monsters</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="imagem/download (30).jfif" alt="Over The Garden Wall" />
+        <div class="info">
+          <h3>Over The Garden Wall</h3>
+          <p>Dois irmãos tentam achar o caminho de volta para casa enquanto viajam por uma terra misteriosa</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="imagem/ioç.jpg" alt="Hora de Aventura" />
+        <div class="info">
+          <h3>Hora de Aventura</h3>
+          <p>Dois irmãos tentam achar o caminho de volta para casa enquanto viajam por uma terra misteriosa</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="git">
+      <span class="label">GitHub</span>
+      <p>
+        Antes de começar, deixe eu te explicar como funciona. Para publicar uma página no GitHub Pages, siga estes
+        passos:<br />
+        Primeiro, crie um repositório público no GitHub. Depois, adicione seus arquivos, incluindo um
+        <b>index.html</b>. Em seguida, vá no repositório em <b>Settings &gt; Pages</b>, selecione a branch
+        <b>main</b> e a pasta <b>/(root)</b>, e clique em <b>Save</b>. Pronto!<br /><br />
+        Seu site estará disponível em:
+        <br /><br />
+        <code>https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/</code>
+      </p>
+    </div>
+  </main>
 </body>
 </html>
