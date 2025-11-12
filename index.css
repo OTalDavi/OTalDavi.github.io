@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   --bg-body: #d3d3d3;
   --bg-menu: #ffffff;
   --color-text: #000;
-
 }
 
 html {
@@ -20,6 +20,8 @@ body {
 
 /* HEADER */
 header {
+  position: relative;
+  z-index: 100; /* garante que fique acima do hero */
   box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.178);
 }
 
@@ -34,6 +36,7 @@ header {
 /* LOGO */
 .logo {
   height: 50px;
+  width: auto;
 }
 
 /* MENU */
@@ -54,8 +57,9 @@ header {
 .menu a:hover {
   transform: scale(1.05);
 }
-.info{
-   font-family: "Jersey 15", sans-serif;
+
+.info {
+  font-family: "Jersey 15", sans-serif;
 }
 
 /* HERO TEXT */
@@ -82,6 +86,7 @@ header {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
+/* CONTAINERS */
 .container {
   height: auto;
   display: flex;
@@ -97,36 +102,33 @@ header {
   font-family: "Jersey 15", sans-serif;
   z-index: 1;
   line-height: 30px;
+  min-height: 200px; /* evita shift */
+}
 
+code {
+  font-size: 30px;
+  background-color: #66666636;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Jersey 15", sans-serif;
 }
-.container {
-  position: relative; /* necessário para o label se posicionar dentro */
-}
-code{
- font-size: 30px;
- background-color: #66666636;
- padding: 10px;
- border-radius: 20px;
- font-family: "Jersey 15", sans-serif;
-}
+
+/* HERO IMAGE */
 .hero {
   width: 100%;
   position: relative;
   overflow: hidden;
   box-shadow: 0px 10px 15px 18px rgba(0, 0, 0, 0.178);
   border-bottom: 1px solid rgba(0, 0, 0, 0.692);
-}
-
-.hero {
-  box-shadow: 0px 10px 20px 18px rgba(0, 0, 0, 0.178);
   z-index: 10;
+  aspect-ratio: 16/9; /* reserva espaço p/ imagem hero */
 }
 
 .hero img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .hero-overlay {
@@ -141,81 +143,78 @@ code{
   z-index: 1;
 }
 
+/* LABEL */
 .label {
   position: absolute;
-  top: -25px; /* sobe a label */
-  left: 20px; /* desloca da borda esquerda */
+  top: -25px;
+  left: 20px;
   background-color: #d3d3d3;
   border-radius: 20px;
   font-size: 40px;
   font-weight: lighter;
   padding: 0px 10px;
 }
-.galeria{
-    display:flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content:center; 
-    margin: auto;
-    
-}
-.image-container{
-    width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-    transition: transform 0.3 ease;
-    display: flex;
-    flex-direction: column;
 
+/* GALERIA */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; 
+  margin: auto;
 }
-.image-container:hover{
-    transform: scale(1.05);
+
+.image-container {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 460px; /* evita shift ao carregar imagem */
 }
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
 .image-container img {
-    width: 300px;
-    height: 400px;
-    object-fit: cover;
-    display: block;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
 }
-.info{
-    padding: 10px 15px;
+
+.info {
+  padding: 10px 15px;
 }
-.info h3{
-    margin: 10px 0 5px;
-    font-size: 30px;
-    color: #333;
+
+.info h3 {
+  margin: 10px 0 5px;
+  font-size: 30px;
+  color: #333;
 }
+
 .info p {
-    margin: 0;
-    font-size: 25px;
-    color: #666;
+  margin: 0;
+  font-size: 25px;
+  color: #666;
 }
 
+#git {
+  display: block;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+/* RESPONSIVIDADE */
 @media (max-width: 1024px) {
-
-  .hero-text {
-  position: absolute;
-  top: 85%;
-  left: 2%;
-  transform: translateY(-50%);
-  z-index: 2;
-  color: #fff;
-  font-family: "Jersey 15", sans-serif;
-}
-
-.hero-title {
-  font-size: 60px;
-  color: #ffffff;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-}
-
-.hero-subtitle {
-  font-size: 58px;
-  color: #583ea0;
-  transform: translateY(-15%);
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-}
-  
+  .hero-title {
+    font-size: 60px;
+  }
+  .hero-subtitle {
+    font-size: 58px;
+  }
 }
