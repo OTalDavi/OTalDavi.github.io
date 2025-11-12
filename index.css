@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
   --bg-body: #d3d3d3;
   --bg-menu: #ffffff;
   --color-text: #000;
+
 }
 
 html {
@@ -16,23 +16,18 @@ html {
 
 body {
   background-color: var(--bg-body);
-  font-family: "Jersey 15", sans-serif;
-  overflow-x: hidden;
 }
 
 /* HEADER */
 header {
   box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.178);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: var(--bg-menu);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: var(--bg-menu);
   padding: 10px 20px;
 }
 
@@ -59,41 +54,19 @@ header {
 .menu a:hover {
   transform: scale(1.05);
 }
-
-/* HERO */
-.hero {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.692);
-  box-shadow: 0px 10px 20px 18px rgba(0, 0, 0, 0.178);
+.info{
+   font-family: "Jersey 15", sans-serif;
 }
 
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 16/9;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-}
-
+/* HERO TEXT */
 .hero-text {
   position: absolute;
-  bottom: 10%;
-  left: 3%;
+  top: 85%;
+  left: 2%;
+  transform: translateY(-50%);
   z-index: 2;
   color: #fff;
-  will-change: transform, opacity;
+  font-family: "Jersey 15", sans-serif;
 }
 
 .hero-title {
@@ -105,105 +78,150 @@ header {
 .hero-subtitle {
   font-size: 91px;
   color: #583ea0;
+  transform: translateY(-15%);
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-  transform: translateY(-10%);
 }
 
-/* CONTAINER */
 .container {
+  height: auto;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
   padding: 30px;
+  gap: 30px;
+  justify-content: space-evenly;
   border: 4px solid #000;
   border-radius: 10px;
   margin: 50px;
-  font-size: 30px;
-  line-height: 40px;
-  background-color: #fff;
+  margin-bottom: 100px;
   position: relative;
+  font-size: 40px;
+  font-family: "Jersey 15", sans-serif;
+  z-index: 1;
+  line-height: 30px;
+
+}
+.container {
+  position: relative; /* necessário para o label se posicionar dentro */
+}
+code{
+ font-size: 30px;
+ background-color: #66666636;
+ padding: 10px;
+ border-radius: 20px;
+ font-family: "Jersey 15", sans-serif;
+}
+.hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px 18px rgba(0, 0, 0, 0.178);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.692);
+}
+
+.hero {
+  box-shadow: 0px 10px 20px 18px rgba(0, 0, 0, 0.178);
+  z-index: 10;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1;
 }
 
 .label {
   position: absolute;
-  top: -25px;
-  left: 20px;
-  background-color: var(--bg-body);
+  top: -25px; /* sobe a label */
+  left: 20px; /* desloca da borda esquerda */
+  background-color: #d3d3d3;
   border-radius: 20px;
-  font-size: 35px;
-  padding: 0 15px;
+  font-size: 40px;
+  font-weight: lighter;
+  padding: 0px 10px;
 }
-
-/* GALERIA */
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin: auto;
+.galeria{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content:center; 
+    margin: auto;
+    
 }
+.image-container{
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3 ease;
+    display: flex;
+    flex-direction: column;
 
-.image-container {
-  width: 300px;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
 }
-
-.image-container:hover {
-  transform: scale(1.05);
+.image-container:hover{
+    transform: scale(1.05);
 }
-
 .image-container img {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-  display: block;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
 }
-
-.info {
-  padding: 10px 15px;
+.info{
+    padding: 10px 15px;
 }
-
-.info h3 {
-  margin: 10px 0 5px;
-  font-size: 28px;
-  color: #333;
+.info h3{
+    margin: 10px 0 5px;
+    font-size: 30px;
+    color: #333;
 }
-
 .info p {
-  margin: 0;
-  font-size: 22px;
-  color: #666;
+    margin: 0;
+    font-size: 25px;
+    color: #666;
+}
+#git {
+  display: block;   /* em vez de flex */
+  font-size: 30px;  /* ajusta para caber melhor */
+  line-height: 1.5; /* melhora a leitura */
 }
 
-code {
-  font-size: 25px;
-  background-color: #66666636;
-  padding: 10px;
-  border-radius: 20px;
+
+@media (max-width: 1024px) {
+
+  .hero-text {
+  position: absolute;
+  top: 85%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
   font-family: "Jersey 15", sans-serif;
 }
 
-/* RESPONSIVO */
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 60px;
-  }
+.hero-title {
+  font-size: 60px;
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
 
-  .hero-subtitle {
-    font-size: 58px;
-  }
-
-  .container {
-    font-size: 24px;
-  }
-
-  .label {
-    font-size: 28px;
-  }
+.hero-subtitle {
+  font-size: 58px;
+  color: #583ea0;
+  transform: translateY(-15%);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+  
 }
