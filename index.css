@@ -176,4 +176,34 @@ header {
 }
 
 .info p {
-  margin
+  margin: 0;
+  font-size: 22px;
+  color: #666;
+}
+
+code {
+  font-size: 25px;
+  background-color: #66666636;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Jersey 15", sans-serif;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-subtitle {
+    font-size: 58px;
+  }
+
+  .container {
+    font-size: 24px;
+  }
+
+  .label {
+    font-size: 28px;
+  }
+}
